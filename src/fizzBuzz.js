@@ -1,5 +1,10 @@
 var Fizzbuzz = function() {};
 
+Fizzbuzz.prototype.isDivisibleByFifteen = function(number) {
+	if( number % 15 == 0 ) {
+		return 'FizzBuzz'
+	}
+};
 
 Fizzbuzz.prototype.isDivisibleByThree = function(number) {
 	if ( number % 3 == 0) {
