@@ -1,21 +1,25 @@
-describe('Fizzbuzz', function() {
-  var fizzbuzz = new Fizzbuzz();
+describe('FizzBuzz', function() {
 
-  describe('knows when a number is', function() {
+  var fizzBuzz;
 
-    it ('divisible by 15', function() {
-      expect(fizzbuzz.isDivisibleByFifteen(15)).toEqual('FizzBuzz');
-    });
-
-    
-    it('divisible by 3', function() {
-      expect(fizzbuzz.isDivisibleByThree(3)).toEqual('Fizz');
-    });
-
-    it('divisible by 5 ', function() {
-      expect(fizzbuzz.isDivisibleByFive(5)).toEqual('Buzz');
-    });
-
+  beforeEach(function() {
+    fizzBuzz = new FizzBuzz();
   });
+
+    it('fizzes for 3', function() {
+      expect(fizzBuzz.game(3)).toEqual('Fizz');
+    });
+
+    it('buzzes for 5', function() {
+      expect(fizzBuzz.game(5)).toEqual('Buzz');
+    });
+
+    it('fizzbuzzes for 15', function() {
+      expect(fizzBuzz.game(15)).toEqual('FizzBuzz');
+    });
+
+    it('1 for 1', function() {
+      expect(fizzBuzz.game(1)).toEqual(1);
+    });
 
 });
